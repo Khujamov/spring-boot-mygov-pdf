@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html th:lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8"/>
     <title>Document1</title>
@@ -34,6 +34,7 @@
         th span {
             font-weight: 700;
         }
+
         li {
             display: inline-block;
             font-weight: 500;
@@ -56,54 +57,26 @@
         <div style="padding: 8px 0; vertical-align: middle; ">
 
             <ul style="display: inline-block; padding: 8px 0; font-weight: 500;">
-                <li>№ <span> 1630</span></li>
+                <li>№ <span th:text="${docNumber}"></span></li>
                 <li style="margin-left: 210px;">Документ выдан:</li>
-                <li style="margin-left: 40px;">KURBANOV BEXZOD ZAFARALIYEVICH</li>
+                <li style="margin-left: 40px;"><span th:text="${userFullName}"></span></li>
             </ul>
             <ul style="font-weight: 500;">
-                <li> Дата создания : <span> 2022-12-02</span></li>
-                <li style="margin-left:328px">ПИНФЛ :<span> 32410996600028</span></li>
+                <li> Дата создания : <span th:text="${createdDate}"></span></li>
+                <li style="margin-left:328px">ПИНФЛ : <span th:text="${pinfl}"></span></li>
             </ul>
         </div>
     </header>
     <main style=" margin-top: 70px;">
         <div>
             <h2 style="padding: 10px 0; text-align: center;">
-            <span
-            >Проверка действия страхового <br/>
-                полиса автотранспорта
-            </span
-            >
+                <span th:text="${serviceName}"></span>
             </h2>
         </div>
         <table style="width: 100%; margin-top: 20px;">
-            <tr>
-                <td style="text-align: center;"><span>Страховка</span></td>
-                <th><span>"GROSS SUG'URTA KOMPANIYASI" AJ</span></th>
-            </tr>
-            <tr>
-                <td style="text-align: center;"><span>Серия и номер полиса </span></td>
-                <th><span>GIU-194325</span></th>
-            </tr>
-            <tr>
-                <td style="text-align: center;"><span>Тип страховки</span></td>
-                <th><span>Без ограничений </span></th>
-            </tr>
-            <tr>
-                <td style="text-align: center;"><span>Сумма страховки</span></td>
-                <th><span>40000000 (месячный взнос - 168000)</span></th>
-            </tr>
-            <tr>
-                <td style="text-align: center;"><span>Срок действия страховки </span></td>
-                <th><span>02.03.2022-01.03.2023</span></th>
-            </tr>
-            <tr>
-                <td style="text-align: center;"><span>Модель автотранспорта</span></td>
-                <th><span>COBALT</span></th>
-            </tr>
-            <tr>
-                <td style="text-align: center;"><span>Гос.номер </span></td>
-                <th>01R425SB</th>
+            <tr th:each="field : ${data}">
+                <td style="text-align: center;"><span th:text="${field.key}"></span></td>
+                <th><span th:text="${field.value}"></span></th>
             </tr>
         </table>
     </main>
@@ -114,7 +87,7 @@
                     th:src="@{classpath:static/images/qr-code.jpg}" alt=""/>
         </div>
         <div style="float: left; width: 100%; height: auto;">
-            
+
             <ul style="display: inline; margin-left: 35px;">
                 <li style="display: inline; text-decoration: none; color: brown; font-weight: 600;">
                     +998(71)-200-43-43
@@ -125,7 +98,7 @@
                         text-decoration: none;
                         color: brown;
                         font-weight: 600;"
-                        href="https://sqb.uz/uz/individuals/">
+                       href="https://sqb.uz/uz/individuals/">
                         <span style="display: inline;">www.sqb.uz</span></a>
                 </li>
             </ul>
