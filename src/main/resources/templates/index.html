@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        body {
+            font-size: 14px;
+            font-family: sans-serif;
+            margin: -15px;
+        }
+
+        table, td {
+            border: 3px solid black;
+            border-collapse: collapse;
+            padding: 15px 0;
+        }
+
+        th {
+            border: 3px solid black;
+            border-collapse: collapse;
+            width: 60%;
+            text-align: left;
+            padding: 15px 0 15px 20px;
+        }
+
+        th span {
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+<section style="margin: 5px auto;">
+    <header>
+        <div style="height: auto; margin-bottom: 15px;">
+            <img th:src="@{classpath:static/images/sqb-img.jpg}" alt=""
+                 style="width: 120px; vertical-align: middle; margin-left: 10px; margin-bottom: 15px;"/>
+            <img th:src="@{classpath:static/images/Emblem_of_Uzbekistan.png}" alt=""
+                 style="width: 85px; vertical-align: middle; margin-left: 130px;"/>
+            <img th:src="@{classpath:static/images/Logo.png}" alt=""
+                 style="width: 170px;  vertical-align: middle; margin-left: 130px;"/>
+        </div>
+        <div style="height: 2px; width: 100%; background-color: rgb(62, 58, 58);"></div>
+        <div style="padding-top: 8px; vertical-align: middle;">
+            <p style=" display: inline-block;">
+                <span>№</span> <span>1630</span> <br/>
+                <span>Дата создания: </span> <span>2022-12-02</span></p>
+            <p style="display: inline-block; margin-left: 100px;"><span
+                    style="vertical-align: middle;">Документ выдан: </span></p>
+            <p style=" display: inline-block; margin-left: 25px; text-align: right;">
+                <span>KURBANOV BEXZOD ZAFARALIYEVICH</span> <br/>
+                <span>ПИНФЛ :</span><span>32410996600028</span>
+            </p>
+        </div>
+    </header>
+    <main style=" margin-top: 80px;">
+        <div>
+            <h2 style="padding: 10px 0; text-align: center;">
+            <span
+            >Проверка действия страхового <br/>
+                полиса автотранспорта
+            </span
+            >
+            </h2>
+        </div>
+        <table style="width: 100%; margin-top: 20px;">
+            <tr>
+                <td style="text-align: center;"><span>Страховка</span></td>
+                <th><span>"GROSS SUG'URTA KOMPANIYASI" AJ</span></th>
+            </tr>
+            <tr>
+                <td style="text-align: center;"><span>Серия и номер полиса </span></td>
+                <th><span>GIU-194325</span></th>
+            </tr>
+            <tr>
+                <td style="text-align: center;"><span>Тип страховки</span></td>
+                <th><span>Без ограничений </span></th>
+            </tr>
+            <tr>
+                <td style="text-align: center;"><span>Сумма страховки</span></td>
+                <th><span>40000000 (месячный взнос - 168000)</span></th>
+            </tr>
+            <tr>
+                <td style="text-align: center;"><span>Срок действия страховки </span></td>
+                <th><span>02.03.2022-01.03.2023</span></th>
+            </tr>
+            <tr>
+                <td style="text-align: center;"><span>Модель автотранспорта</span></td>
+                <th><span>COBALT</span></th>
+            </tr>
+            <tr>
+                <td style="text-align: center;"><span>Гос.номер </span></td>
+                <th>01R425SB</th>
+            </tr>
+        </table>
+    </main>
+    <footer style="margin-top: 80px;">
+        <div style="display: inline-block; margin-left: 250px;">
+            <img
+                    style="width: 130px;"
+                    th:src="@{classpath:static/images/qr-code.jpg}" alt=""/>
+        </div>
+        <div style="float: left; width: 100%;">
+            <p style="display: inline-block;  color: brown; font-weight: 600;"><span>+998(71)-200-43-43</span></p>
+            <ul style="display: inline-block; margin-left: 35px;">
+                <li style="display: inline-block;">
+                    <a style="
+              text-decoration: none;
+              color: brown;
+              font-weight: 600;"
+                       href="https://sqb.uz/uz/individuals/">
+                        <span style="display: inline-block;">www.sqb.uz</span></a>
+                </li>
+            </ul>
+            <p style="display: inline-block; font-weight: 500; margin-left: 240px;">Страница №1</p>
+            <div style="clear: both;"></div>
+        </div>
+    </footer>
+</section>
+</body>
+</html>
